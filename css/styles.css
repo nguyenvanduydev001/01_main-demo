@@ -1,0 +1,161 @@
+:root {
+  /* Màu */
+  --color-primary: #1777E5;
+  --color-bg: #FFFFFF;
+  --color-text: #121314;
+  --color-gray: #485057;
+
+  /* Font */
+  --font-main: "Inter", sans-serif;
+  --fw-bold: 900;
+  --fw-medium: 600;
+
+  /* Cỡ chữ */
+  --fs-h1: 57px;
+  --fs-h2: 57px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  max-width: 1320px;
+  height: 120px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.header__logo {
+  max-width: 100%;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.header__name {
+  font-style: normal;
+  font-weight: var(--fw-medium);
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: var(--color-text);
+  margin-top: 1px;
+}
+
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.header__navigation {
+  margin-right: 18px;
+  margin-top: 4px;
+}
+
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.header__item {
+  list-style: none;
+}
+
+.header__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #7B848B;
+}
+
+.header__link:hover {
+  color: var(--color-text);
+}
+
+.header__link--active {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.header__email-button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 219px;
+  height: 56px;
+  padding: 0 24px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(146, 73, 242, 0.12),
+    rgba(255, 95, 73, 0.12)
+  );
+
+  border: none;
+  border-radius: 4px;
+
+  font-size: 18px;
+  font-weight: 500;
+  color: #121314;
+
+  cursor: pointer;
+}
+
+.header__email-button::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  padding: 2px;
+
+  border-radius: 4px;
+
+  background: linear-gradient(
+    to right,
+    #9249F2,
+    #FF5F49
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
